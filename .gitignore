@@ -1,3 +1,7 @@
 node_modules/
 nwjs.app
 nwjc
+atom-*
+octo.js
+test.js
+file.html

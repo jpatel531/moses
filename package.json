@@ -7,6 +7,9 @@
     "icon": "./img/icon.png"
   },
   "dependencies": {
-    "marked": "^0.3.3"
+    "first-mate": "^3.1.0",
+    "highlights": "^1.2.0",
+    "marked": "^0.3.3",
+    "octonode": "^0.6.16"
   }
 }

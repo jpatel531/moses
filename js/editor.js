@@ -1,3 +1,7 @@
+var Highlights = require('highlights');
+
+// console.log(Highlights)
+
 exports.reload = function(){
     var marked = require("marked");
     marked.setOptions({
@@ -10,6 +14,28 @@ exports.reload = function(){
         smartLists: true,
         smartypants: false
     });
+
+
+    marked.setOptions({
+      highlight: function (code, lang, callback) {
+        // console.log(code);
+        // console.log(lang);
+        var highlighter = new Highlights();
+        var html = highlighter.highlightSync({
+            fileContents: code,
+            scopeName: 'source.' + lang
+        })
+        console.log(html);
+        return html;
+        // require('pygmentize-bundled')({ lang: lang, format: 'html' }, code, function (err, result) {
+            // console.log(callback)
+            // console.log(result.toString())
+          // callback(err, result.toString());
+          // return result.toString()
+        // });
+      }
+    });
+
     var resultDiv = global.$('.md_result');
     var textEditor = global.$('#editor');
     var text = textEditor.val();
