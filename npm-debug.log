@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/opt/nvm/v0.10.32/bin/node',
+1 verbose cli   '/usr/local/opt/nvm/v0.10.32/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'react' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink /usr/local/opt/nvm/v0.10.32/bin/node
+5 error Error: Invalid name: "Markdown Moses"
+5 error     at ensureValidName (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:315:15)
+5 error     at Object.module.exports.fixNameField (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/fixer.js:204:5)
+5 error     at /usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:30:38
+5 error     at Array.forEach (native)
+5 error     at normalize (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/node_modules/normalize-package-data/lib/normalize.js:29:15)
+5 error     at final (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/read-json.js:342:33)
+5 error     at then (/usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/read-json.js:126:33)
+5 error     at /usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/read-package-json/read-json.js:331:40
+5 error     at evalmachine.<anonymous>:271:14
+5 error     at /usr/local/Cellar/nvm/0.17.2/v0.10.32/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Darwin 14.0.0
+8 error command "/usr/local/opt/nvm/v0.10.32/bin/node" "/usr/local/opt/nvm/v0.10.32/bin/npm" "install" "--save" "react"
+9 error cwd /Users/jamiepatel/Desktop/projects/moses
+10 error node -v v0.10.32
+11 error npm -v 1.4.28
+12 verbose exit [ 1, true ]
