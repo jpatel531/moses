@@ -1,10 +1,10 @@
 {
-  "name": "markdown_editor",
+  "name": "Markdown Moses",
   "main": "./html/index.html",
   "window": {
     "toolbar": true,
     "show": true,
-    "icon": "./img/icon.png"
+    "icon": "./img/moses.jpg"
   },
   "dependencies": {
     "first-mate": "^3.1.0",

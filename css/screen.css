@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+
+body {
+    font-family: 'Merriweather', serif !important;
+    font-weight: 200 !important;
+}
+
+textarea {
+    border: none;
+}
+
+.md_result {
+    word-wrap: break-word;
+}

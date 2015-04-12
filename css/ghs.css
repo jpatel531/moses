@@ -1,0 +1,124 @@
+.editor-colors,
+:host {
+  background-color: #ffffff;
+  color: #555555;
+}
+.editor .invisible-character,
+:host .invisible-character,
+.editor .indent-guide,
+:host .indent-guide {
+  color: rgba(85, 85, 85, 0.2);
+}
+.editor .gutter,
+:host .gutter {
+  background-color: #fcfcfc;
+}
+.editor .gutter .line-number,
+:host .gutter .line-number {
+  background: #fcfcfc;
+}
+.editor .gutter .line-number.folded,
+:host .gutter .line-number.folded,
+.editor .gutter .line-number:after,
+:host .gutter .line-number:after,
+.editor .fold-marker:after,
+:host .fold-marker:after {
+  color: rgba(85, 85, 85, 0.4);
+}
+.editor .cursor,
+:host .cursor {
+  border-color: #000000;
+}
+.editor .selection .region,
+:host .selection .region {
+  background-color: #b2d7ff;
+  color: #555555;
+}
+.editor .cursor-line,
+:host .cursor-line {
+  background-color: rgba(248, 238, 199, 0.5);
+}
+.editor .line-number.cursor-line-no-selection,
+:host .line-number.cursor-line-no-selection {
+  background-color: #f8eec7;
+  color: rgba(85, 85, 85, 0.4);
+  opacity: 1;
+}
+.bracket-matcher {
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+.comment {
+  color: #999988 !important;
+  font-style: italic;
+}
+.punctuation {
+  color: #333333;
+  font-weight: bold;
+}
+.punctuation.separator {
+  font-weight: normal;
+}
+.entity {
+  color: #990000;
+  font-weight: bold;
+}
+.entity.class {
+  color: #445588;
+}
+.entity.inherited-class {
+  color: #008080;
+  font-weight: normal;
+}
+.support.class {
+  color: #008080;
+  font-weight: normal;
+}
+.keyword {
+  color: #333333;
+  font-weight: bold;
+}
+.storage.type {
+  color: #009926;
+}
+.constant {
+  color: #990073;
+}
+.constant.numeric,
+.constant.boolean {
+  color: #333333;
+  font-weight: bold;
+}
+.variable {
+  color: #008080;
+}
+.variable.parameter {
+  color: #333333;
+}
+.delimiter,
+.brace {
+  color: #333333;
+}
+.delimiter.period {
+  color: #333333;
+}
+.invalid.deprecated {
+  text-decoration: underline;
+  color: #dd1144;
+}
+.invalid.illegal {
+  color: #dd1144;
+}
+.string {
+  color: #dd1144;
+}
+.string .constant.character.escape {
+  color: #dd1144;
+}
+.string.regexp {
+  color: #009926;
+}
+.string.regexp .source.ruby.embedded,
+.string.regexp .string.regexp.arbitrary-repitition {
+  color: #009926;
+}
