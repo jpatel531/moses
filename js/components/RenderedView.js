@@ -40,9 +40,9 @@ var RenderedView = React.createClass({
     var innerHTML = {__html: text}
 
     return (
-      <div 
-      dangerouslySetInnerHTML={innerHTML}
-      className="md_result markdown-body">
+      <div className="col s6">
+        <div  dangerouslySetInnerHTML={innerHTML}
+              className="md_result markdown-body" />
       </div>
     );
   }
