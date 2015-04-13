@@ -9,16 +9,13 @@
     <script src="../js/materialize.min.js"></script>
     <script type="text/javascript">
       global.window = window;
-      document = window.document
+      global.document = window.document;
+      global.navigator = window.navigator;
       global.$ = $;
       global.gui = require('nw.gui');
     </script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript">
-    init();
-    </script>
     <link rel="stylesheet" type="text/css" href="../css/ghs.css">
-    <script src="../js/bundle.js" defer></script>
+    <script src="../js/transformed/Moses.js" defer></script>
   </head>
   <body>
 
@@ -30,17 +27,7 @@
       <input style="display:none;" type="file"  id="saveFileDialog" nwsaveas="file.md" />
 
 
-<!--       <div class="row">
-        <div class="col s6">
-          <textarea name="markdown" id="editor" class="md_editor materialize-textarea"></textarea>
-        </div>
-        <div class="col s6">
-          <div class="md_result markdown-body">
-          </div>
-        </div>
-      </div>
- -->
-      
     </div>
+
   </body>
 </html>

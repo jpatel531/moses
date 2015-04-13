@@ -5,7 +5,7 @@ var Highlights = require('highlights');
 
 console.log('hello')
 
-var RenderedView = React.createClass({
+var RenderedView = React.createClass({displayName: "RenderedView",
 
   componentWillMount: function() {
     this.marked = marked;
@@ -40,10 +40,10 @@ var RenderedView = React.createClass({
     var innerHTML = {__html: text}
 
     return (
-      <div 
-      dangerouslySetInnerHTML={innerHTML}
-      className="md_result markdown-body">
-      </div>
+      React.createElement("div", {
+      dangerouslySetInnerHTML: innerHTML, 
+      className: "md_result markdown-body"}
+      )
     );
   }
 

@@ -1,5 +1,7 @@
 var React = require('react');
-var RenderedView = require('./RenderedView');
+var RenderedView = require('./../js/transformed/RenderedView');
+
+console.log('hello');
 
 var Moses = React.createClass({
 
