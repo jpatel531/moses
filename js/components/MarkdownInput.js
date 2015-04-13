@@ -6,12 +6,27 @@ var MarkdownInput = React.createClass({
     this.props.handleChange(event);
   },
 
+  handleKeyDown: function(e){
+    if (e.keyCode === 9) {
+      var node = this.refs.editor.getDOMNode()
+      var val = node.value
+      var start = node.selectionStart
+      var end = node.selectionEnd
+
+      node.value = val.substring(0, start) + '\t' + val.substring(end);
+      node.selectionStart = node.selectionEnd = start + 1;
+
+      return false;
+    }
+  },
+
   render: function() {
     return (
       <div className="col s6">
         <textarea name="markdown" 
-          id="editor"
+        ref="editor"
           value={this.props.content}
+          onKeyDown={this.handleKeyDown}
           onChange={this.handleChange}
           className="md_editor materialize-textarea">
         </textarea>

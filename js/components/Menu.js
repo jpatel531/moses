@@ -31,6 +31,13 @@ var Menu = React.createClass({
       }
     }));
 
+    fileMenu.append(new global.gui.MenuItem({
+      label: 'Exit',
+      click: function() {
+          global.gui.App.quit();
+      }
+    }));
+
     menubar.append(new global.gui.MenuItem({ label: 'File', submenu: fileMenu}));
     win.menu = menubar;
 
