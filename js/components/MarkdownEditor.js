@@ -1,6 +1,6 @@
 var React = require('react');
 
-var MarkdownInput = React.createClass({
+var MarkdownEditor = React.createClass({
 
   handleChange: function(event){
     this.props.handleChange(event);
@@ -8,6 +8,7 @@ var MarkdownInput = React.createClass({
 
   handleKeyDown: function(e){
     if (e.keyCode === 9) {
+      e.preventDefault()
       var node = this.refs.editor.getDOMNode()
       var val = node.value
       var start = node.selectionStart
@@ -15,8 +16,6 @@ var MarkdownInput = React.createClass({
 
       node.value = val.substring(0, start) + '\t' + val.substring(end);
       node.selectionStart = node.selectionEnd = start + 1;
-
-      return false;
     }
   },
 
@@ -36,4 +35,4 @@ var MarkdownInput = React.createClass({
 
 });
 
-module.exports = MarkdownInput;
+module.exports = MarkdownEditor;

@@ -3,8 +3,6 @@ var React = require('react');
 var marked = require('marked');
 var Highlights = require('highlights');
 
-console.log('hello')
-
 var RenderedView = React.createClass({displayName: "RenderedView",
 
   componentWillMount: function() {

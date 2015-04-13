@@ -1,6 +1,6 @@
 var React = require('react');
 var RenderedView = require('./../js/transformed/RenderedView');
-var MarkdownInput = require('./../js/transformed/MarkdownInput');
+var MarkdownEditor = require('./../js/transformed/MarkdownEditor');
 var Menu = require('./../js/transformed/Menu');
 
 
@@ -45,7 +45,7 @@ var Moses = React.createClass({displayName: "Moses",
                 loadFile: this.loadFile, 
                 saveFile: this.saveFile}), 
         React.createElement("div", {className: "row"}, 
-          React.createElement(MarkdownInput, {
+          React.createElement(MarkdownEditor, {
             content: this.state.content, 
             handleChange: this.handleChange}), 
           React.createElement(RenderedView, {
@@ -58,5 +58,3 @@ var Moses = React.createClass({displayName: "Moses",
 });
 
 React.render(React.createElement(Moses, null), document.getElementById('app'))
-
-module.exports = Moses;
