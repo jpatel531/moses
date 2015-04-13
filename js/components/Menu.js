@@ -1,4 +1,5 @@
 var React = require('react');
+var $ = require('jquery');
 
 var Menu = React.createClass({
 
@@ -19,13 +20,14 @@ var Menu = React.createClass({
     fileMenu.append(new global.gui.MenuItem({
       label: 'Open',
       click: function() {
-        global.$('#openFileDialog').change(function(evt){
-          console.log(global.$(this).val())
-        });
-        // self.refs.openFileDialog.change()
-        // editor.chooseFile("#openFileDialog", function(filename){
-        //   editor.loadFile(filename);
-        // });
+        self.chooseFile('open', self.props.loadFile);
+      }
+    }));
+
+    fileMenu.append(new global.gui.MenuItem({
+      label: 'Save',
+      click: function() {
+        self.chooseFile('save', self.props.saveFile);
       }
     }));
 
@@ -34,8 +36,21 @@ var Menu = React.createClass({
 
   },
 
-  handleFile: function(e){
-    console.log(e.target.files)
+  chooseFile: function(intent, callback){
+    var chooser;
+
+    if (intent === 'open') {
+      chooser = $('#openFileDialog');
+    } else if (intent === 'save') {
+      chooser = $('#saveFileDialog');
+    }
+
+    chooser.change(function(event){
+      callback($(this).val())
+    });
+
+    chooser.trigger('click');
+
   },
 
   render: function() {
@@ -46,7 +61,6 @@ var Menu = React.createClass({
       <div>
         <input  style={hidden} 
                 id="openFileDialog" 
-                onChange={this.handleFile}
                 type="file" />
         <input  style={hidden} 
                 type="file"  

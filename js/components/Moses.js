@@ -25,6 +25,14 @@ var Moses = React.createClass({
     });
   },
 
+  saveFile: function(fileName){
+    var fs = require('fs');
+    fs.writeFile(fileName, this.state.content, function(err){
+      if (err) return console.log(err);
+      console.log("File saved!");
+    });
+  },
+
   handleChange: function(event){
     var content = event.target.value;
     this.setState({content: content});
@@ -33,7 +41,9 @@ var Moses = React.createClass({
   render: function() {
     return (
       <div className="container">
-        <Menu loadText={this.loadText} />
+        <Menu   loadText={this.loadText}
+                loadFile={this.loadFile}
+                saveFile={this.saveFile}/>
         <div className="row">
           <MarkdownInput
             content={this.state.content}

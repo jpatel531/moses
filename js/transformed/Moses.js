@@ -25,6 +25,14 @@ var Moses = React.createClass({displayName: "Moses",
     });
   },
 
+  saveFile: function(fileName){
+    var fs = require('fs');
+    fs.writeFile(fileName, this.state.content, function(err){
+      if (err) return console.log(err);
+      console.log("File saved!");
+    });
+  },
+
   handleChange: function(event){
     var content = event.target.value;
     this.setState({content: content});
@@ -33,7 +41,9 @@ var Moses = React.createClass({displayName: "Moses",
   render: function() {
     return (
       React.createElement("div", {className: "container"}, 
-        React.createElement(Menu, {loadText: this.loadText}), 
+        React.createElement(Menu, {loadText: this.loadText, 
+                loadFile: this.loadFile, 
+                saveFile: this.saveFile}), 
         React.createElement("div", {className: "row"}, 
           React.createElement(MarkdownInput, {
             content: this.state.content, 
