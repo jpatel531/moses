@@ -34,7 +34,7 @@ var Moses = React.createClass({displayName: "Moses",
   },
 
   handleChange: function(event){
-    var content = event.target.value;
+    var content = event.target.innerText;
     this.setState({content: content});
   },
 

@@ -17,18 +17,23 @@ var MarkdownEditor = React.createClass({
       node.value = val.substring(0, start) + '\t' + val.substring(end);
       node.selectionStart = node.selectionEnd = start + 1;
     }
+    this.props.handleChange(e)
+
   },
+
+
 
   render: function() {
     return (
       <div className="col s6">
-        <textarea name="markdown" 
-        ref="editor"
-          value={this.props.content}
-          onKeyDown={this.handleKeyDown}
-          onChange={this.handleChange}
-          className="md_editor materialize-textarea">
-        </textarea>
+        <div  name="markdown" 
+              contentEditable={true}
+              ref="editor"
+              innerText={this.props.content}
+              onKeyDown={this.handleKeyDown}
+              onChange={this.handleChange}
+              className="md_editor materialize-textarea">
+        </div>
       </div>
     );
   }
